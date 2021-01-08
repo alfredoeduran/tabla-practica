@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exportar table a CSV con JavaScript</h1>
+    <table id="dataTable" class="table">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>nombre</th>
+                <th>Puntos</th>
+                <th>Equipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1 </th>
+                <td>Steven Soto</td>
+                <td>2.456</td>
+                <td>Azul</td>
+            </tr>
+            <tr>
+                <th>2 </th>
+                <td>Alfred Foster</td>
+                <td>1453</td>
+                <td>Rojo</td>
+            </tr>
+            <tr>
+                <th>3 </th>
+                <td>Martin Soros</td>
+                <td>1687</td>
+                <td>Azul</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>Carmen Frank</td>
+                <td>4.257</td>
+                <td>Azul</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <button class="button" id="btnExportToCsv" type="button">Exportar a CSV</button>
+    <script>
+        const dataTable = document.getElementById("dataTable");
+        const btnExportToCsv = document.getElementById("btnExportToCsv");
+
+        btnExportToCsv.addEventListener("click", () => {
+            const exporter = new TableCSVExporter(dataTable);
+            const csvOutput = exporter.convertToCSV();
+            const csvBlob = new Blob ([csvOutput], { type:)
+        }
+    </script>
+    <script src="TableCSVExporter.js"></script>
+</body>
+</html>
